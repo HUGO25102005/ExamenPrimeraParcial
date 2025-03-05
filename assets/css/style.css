@@ -1,0 +1,171 @@
+/*
+    A la mayoria de los estilos no les puse clase,
+    ya que se repetirian en todos los archivos, 
+    solamente a los que son especificos de cada archivo
+    por ejemplo los estilos de la lista de alumnos
+    si les puse clase, o el contenedor que cambiara dependiendo la seccion
+*/
+
+:root {
+    --primary-color: #a576f1d8;
+    --secondary-color: #8e47ff;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    
+    color: black;
+    padding: 10px 0;
+}
+
+header section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+header h1 {
+    margin: 0;
+}
+
+header img {
+    height: 50px;
+}
+
+nav {
+    padding: 10px 0;
+    background-color: var(--primary-color);
+    display: flex;
+    justify-content: end;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: var(--secondary-color);
+    border-radius: 5px;       
+}
+
+main {
+    padding: 20px;
+    background-color: white;
+    margin: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+main h2 {
+    color: #333;
+}
+
+main p {
+    line-height: 1.6;
+    color: #666;
+}
+.principal-cont {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.cont-div-text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
+}
+.cont-div-text p{
+    text-align: center;
+    width: 620px;
+    margin: 20px;
+    text-align: justify;
+}
+
+.btn-final {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+}
+
+.btn-final:hover {
+    background-color: var(--secondary-color)
+}
+
+footer {
+    margin: 0;
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer .text-p {
+    margin-left: 15px;
+}
+
+
+/* Listado de alumnos*/
+.cont-alumnos {
+    width: 420px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+}
+
+.alumnos {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.alumnos li {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* 
+este codigo si se que es por si lo duda: el last-child selecciona el ultimo hijo de la lista
+en este caso el ultimo li de la lista de alumnos y le quita el borde de abajo, solo para que 
+no se vea el ultimo borde pues 
+*/ 
+.alumnos li:last-child {
+    border-bottom: none;
+}
